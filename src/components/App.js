@@ -1,10 +1,12 @@
 import React from "react";
 import "../styles/app.css";
+import LocationDetails from "./LocationDetails";
 
-function App() {
+function App(props) {
+  const { location } = props;
   return (
     <div className="App">
-      <h1>Weather App</h1>
+      <LocationDetails city={location.city} country={location.country} />
     </div>
   );
 }
