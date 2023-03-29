@@ -1,9 +1,10 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "../components/App";
+import forecast from "../data/forecast.json";
 
-test("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Weather App/i);
-  expect(linkElement).toBeInTheDocument();
+test("renders app component correctly", () => {
+  render(<App location={forecast.location}/>);
+  const h1Element = screen.getByText(/Manchester, UK/i);
+  expect(h1Element).toBeInTheDocument();
 });
