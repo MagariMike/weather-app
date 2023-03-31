@@ -44,10 +44,10 @@ describe("ForecastSummary", () => {
       "class",
       "forecast-summary__description"
     );
-    expect(screen.getByText("stubIcon")).toHaveAttribute(
-      "class",
+    expect(screen.getByTestId("forecast-icon")).toHaveClass(
       "forecast-summary__icon"
     );
+
     expect(screen.getByText("22°C")).toHaveAttribute(
       "class",
       "forecast-summary__temperature"
