@@ -28,4 +28,18 @@ describe("Forecast Summaries", () => {
     const { asFragment } = render(<ForecastSummaries forecasts={validProps} />);
     expect(asFragment()).toMatchSnapshot();
   });
+
+  //   it("renders the correct number of ForecastSummary instances", () => {
+  //     const { getAllByTestId } = render(
+  //       <ForecastSummaries forecasts={validProps} />
+  //     );
+
+  //     expect(getAllByTestId("forecast-summary")).toHaveLength(2);
+  //   });
+  it("renders the correct number of ForecastSummary intances", () => {
+    const { getAllByTestId } = render(
+      <ForecastSummaries forecasts={validProps} />
+    );
+    expect(getAllByTestId('forecast-summary')).toHaveLength(2);
+  });
 });
