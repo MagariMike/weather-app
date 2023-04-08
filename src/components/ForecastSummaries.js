@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/ForecastSummaries.css";
 import ForecastSummary from "./ForecastSummary";
 
 function ForecastSummaries({ forecasts }) {

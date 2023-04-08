@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/app.css";
 
 function LocationDetails(props) {
   const { city, country } = props;
