@@ -1,0 +1,11 @@
+.formatted-date {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.forecast-details__center {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
