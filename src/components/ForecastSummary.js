@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import iconData from "../data/iconData.json";
-import ForecastDetails from "./ForecastDetails";
-// import Forecast from "../data/forecast.json";
 
 function ForecastSummary(props) {
-  const { date, description, icon, temperature } = props;
+  const { date, description, icon, temperature, onMoreDetailsClick } = props;
   const weatherCode = `${icon.slice(0, 1)}00`;
   const formattedDate = new Date(date).toDateString();
-  const [selectedDate, setSelectedDate] = useState();
 
-  const handleClick = () => {
-    setSelectedDate(date);
-  };
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary__date">{formattedDate}</div>
@@ -25,10 +19,9 @@ function ForecastSummary(props) {
       <div className="forecast-summary__temperature">
         {temperature.max}&deg;C
       </div>
-      <button onClick={handleClick} type="submit">
+      <button onClick={onMoreDetailsClick} type="button">
         More Details
       </button>
-      {selectedDate ? <ForecastDetails /> : null}
     </div>
   );
 }
